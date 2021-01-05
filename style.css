@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+/* typography */
+h1 {
+  font-size: 1rem;
+}
+
+.toggle p,
+.detail {
+  font-size: 0.5rem;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.sub-type {
+  font-weight: bold;
+}
+
+.learn-more-btn {
+  font-size: 0.5em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+/* colors */
+:root {
+  --primary-color: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --v-light-gry-blue: hsl(240, 78%, 98%);
+  --light-gry-blue: hsl(234, 14%, 74%);
+  --gry-blue: hsl(233, 13%, 49%);
+  --drk-gry-blue: hsl(232, 13%, 33%);
+}
+
+h1,
+.toggle-cont p,
+.card .sub-type
+.card .price,
+.card .detail {
+  color: var(--drk-gry-blue);
+}
+
+.card-pro .sub-type,
+.card-pro .detail,
+.card-pro .price{
+  color: var(--v-light-gry-blue);
+}
+
+.card-pro p {
+  color: var(--light-gry-blue);
+}
+
+.toggle,
+.card-pro,
+.card .learn-more-btn {
+  background-image: var(--primary-color);
+}
+
+.learn-more-btn {
+  color: var(--v-light-gry-blue);
+}
+
+.card-pro > .learn-more-btn {
+  color: var(--gry-blue);
+  background-color: var(--v-light-gry-blue);
+}
+
+/* layout */
+main,
+section.top,
+.toggle-cont,
+section.cards,
+.card,
+.card-pro,
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+  justify-content: space-between;
+  background-image:
+    url(images/bg-top.svg),
+    url(images/bg-bottom.svg);
+  background-position:
+    top right,
+    bottom left;
+  background-repeat: no-repeat;
+}
+
+main,
+section.top,
+.card,
+.card-pro,
+.details {
+  flex-direction: column;
+}
+
+.price {
+  margin: 0;
+}
+.details {
+  margin: 1em 0;
+}
+
+.detail {
+  padding: .5em;
+}
+
+/* toggle */
+.toggle {
+  width: 60px;
+  border-radius: 25px;
+  padding: 3px;
+  margin: 0 1em;
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--v-light-gry-blue);
+}
+
+/* cards */
+.card,
+.card-pro {
+  width: 200px;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.card-pro {
+  padding: 1.5em 1em;
+}
+
+.card {
+  box-shadow: 2px 3px 3px var(--light-gry-blue);
+}
+
+.learn-more-btn {
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  padding: 0.9em;
+  /* background-color: var(--gry-blue); */
+}
